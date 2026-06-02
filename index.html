@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Local Community Event Portal</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+#welcomeBanner{
+    background-color: lightblue;
+    padding:15px;
+}
+</style>
+
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="help.html" target="_blank">Help</a></li>
+    </ul>
+</nav>
+
+<!-- Main -->
+<section id="home">
+
+<div id="welcomeBanner">
+    <h1>Welcome to Community Event Portal</h1>
+    <span style="color:red;font-weight:bold;">
+        Special Offer: Free Registration!
+    </span>
+</div>
+
+</section>
+
+<section id="events">
+
+<h2>Upcoming Events</h2>
+
+<div id="eventContainer"></div>
+
+<h2>Image Gallery</h2>
+
+<table>
+<tr>
+<td>
+<img src="https://via.placeholder.com/150"
+class="gallery">
+<p>Music Fest</p>
+</td>
+
+<td>
+<img src="https://via.placeholder.com/150"
+class="gallery">
+<p>Sports Day</p>
+</td>
+
+<td>
+<img src="https://via.placeholder.com/150"
+class="gallery">
+<p>Workshop</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="https://via.placeholder.com/150"
+class="gallery">
+<p>Dance Show</p>
+</td>
+
+<td>
+<img src="https://via.placeholder.com/150"
+class="gallery">
+<p>Food Fair</p>
+</td>
+
+<td>
+<img src="https://via.placeholder.com/150"
+class="gallery">
+<p>Art Expo</p>
+</td>
+</tr>
+</table>
+
+</section>
+
+<h2>Event Registration</h2>
+
+<form id="registerForm">
+
+<input type="text"
+name="name"
+placeholder="Enter Name"
+required
+autofocus>
+
+<input type="email"
+name="email"
+placeholder="Enter Email"
+required>
+
+<input type="date" required>
+
+<select id="eventType" required>
+<option>Music</option>
+<option>Workshop</option>
+<option>Sports</option>
+</select>
+
+<input type="text"
+id="phone"
+placeholder="Phone Number"
+onblur="validatePhone()">
+
+<textarea
+id="feedback"
+placeholder="Feedback"
+onkeyup="countChars()"></textarea>
+
+<p>Characters: <span id="count">0</span></p>
+
+<button type="submit">Register</button>
+
+</form>
+
+<output id="result"></output>
+
+<h2>Video Invite</h2>
+
+<video width="300"
+controls
+oncanplay="videoReady()">
+<source src="sample.mp4" type="video/mp4">
+</video>
+
+<p id="videoMsg"></p>
+
+<h2>Location</h2>
+
+<button onclick="findLocation()">
+Find Nearby Events
+</button>
+
+<p id="location"></p>
+
+<button onclick="clearData()">
+Clear Preferences
+</button>
+
+<!-- Footer -->
+<footer id="contact">
+<h3>Contact Us</h3>
+<p>Email : community@gmail.com</p>
+</footer>
+
+<script src="main.js"></script>
+
+</body>
+</html>
