@@ -1,0 +1,14 @@
+<h1>Available Courses</h1>
+
+<div *ngIf="!isLoading">
+
+    <app-course-card *ngFor="let c of courses; trackBy: trackByCourseId" [course]="c"
+        (enrollRequested)="onEnroll($event)">
+    </app-course-card>
+
+</div>
+
+<p *ngIf="selectedCourseId">
+    <strong>Selected Course ID:</strong>
+    {{ selectedCourseId }}
+</p>
